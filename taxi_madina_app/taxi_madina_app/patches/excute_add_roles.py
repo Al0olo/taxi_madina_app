@@ -1,4 +1,4 @@
-from TAXI_MADINA_APP.taxi_madina_app.patches.add_roles import  add_roles,add_role_profiles
+from taxi_madina_app.taxi_madina_app.patches.add_roles import  add_roles,add_role_profiles
 
 
 def execute():

@@ -1,1 +1,1 @@
-TAXI_MADINA_APP.taxi_madina_app.patches.execute_add_role 14-05-2024 # 12:34
+taxi_madina_app.taxi_madina_app.patches.execute_add_role 14-05-2024 # 12:36
