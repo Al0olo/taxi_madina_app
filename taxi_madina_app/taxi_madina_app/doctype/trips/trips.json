@@ -1,0 +1,80 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-05-14 09:21:13.832988",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "from_location",
+  "column_break_ksqf",
+  "to_location",
+  "section_break_zqln",
+  "estimated_cost",
+  "column_break_llsu",
+  "estimated_time"
+ ],
+ "fields": [
+  {
+   "fieldname": "from_location",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "From",
+   "options": "Locations",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_ksqf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "to_location",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "To",
+   "options": "Locations",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_zqln",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "estimated_cost",
+   "fieldtype": "Data",
+   "label": "Estimated Cost"
+  },
+  {
+   "fieldname": "column_break_llsu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "estimated_time",
+   "fieldtype": "Data",
+   "label": "Estimated Time"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-05-14 09:28:35.815521",
+ "modified_by": "Administrator",
+ "module": "Taxi Madina App",
+ "name": "Trips",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
