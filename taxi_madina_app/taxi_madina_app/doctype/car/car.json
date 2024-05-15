@@ -23,7 +23,8 @@
   {
    "fieldname": "car_color",
    "fieldtype": "Data",
-   "label": "Car Color"
+   "label": "Car Color",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_iipp",
@@ -51,7 +52,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-14 09:12:33.360169",
+ "modified": "2024-05-14 14:41:40.846860",
  "modified_by": "Administrator",
  "module": "Taxi Madina App",
  "name": "Car",
