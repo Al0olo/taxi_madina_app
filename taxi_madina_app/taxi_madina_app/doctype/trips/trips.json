@@ -10,12 +10,16 @@
   "driver",
   "section_break_zbap",
   "trip_type",
+  "direction",
   "column_break_zupd",
   "status",
+  "waiting_time",
   "section_break_lzpy",
   "from_location",
+  "time",
   "column_break_ksqf",
   "to_location",
+  "trip_date",
   "section_break_zqln",
   "estimated_cost",
   "payment_method",
@@ -137,11 +141,34 @@
    "fieldname": "car_image",
    "fieldtype": "Attach Image",
    "label": "Car Image"
+  },
+  {
+   "fieldname": "direction",
+   "fieldtype": "Select",
+   "label": "Trip Direction",
+   "options": "One Way\nTwo Way"
+  },
+  {
+   "fieldname": "waiting_time",
+   "fieldtype": "Select",
+   "label": "Waiting Time",
+   "options": "1 Hour\n2 Hour\n3 Hour\n4 Hour\nOpen"
+  },
+  {
+   "fieldname": "time",
+   "fieldtype": "Select",
+   "label": "Time",
+   "options": "5 Mins\n10 Mins\n15 Mins\n20 Mins\n30 Mins\n45 Mins\n1 Hour\n2 Hour\n3 Hour"
+  },
+  {
+   "fieldname": "trip_date",
+   "fieldtype": "Date",
+   "label": "Trip Date"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-06-03 01:44:14.720613",
+ "modified": "2024-06-03 02:53:57.959105",
  "modified_by": "Administrator",
  "module": "Taxi Madina App",
  "name": "Trips",
