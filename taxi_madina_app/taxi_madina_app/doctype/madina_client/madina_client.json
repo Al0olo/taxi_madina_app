@@ -10,15 +10,15 @@
   "column_break_jedm",
   "phone_number",
   "section_break_ujjo",
-  "last_login"
+  "last_login",
+  "token"
  ],
  "fields": [
   {
    "fieldname": "full_name",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Full Name",
-   "reqd": 1
+   "label": "Full Name"
   },
   {
    "fieldname": "address",
@@ -31,7 +31,7 @@
   },
   {
    "fieldname": "phone_number",
-   "fieldtype": "Phone",
+   "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Phone Number",
    "reqd": 1
@@ -44,11 +44,16 @@
    "fieldname": "last_login",
    "fieldtype": "Datetime",
    "label": "Last Login"
+  },
+  {
+   "fieldname": "token",
+   "fieldtype": "Long Text",
+   "label": "Device Token"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-06-03 00:21:12.315158",
+ "modified": "2024-06-03 01:01:37.788373",
  "modified_by": "Administrator",
  "module": "Taxi Madina App",
  "name": "Madina Client",
