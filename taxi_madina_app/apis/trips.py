@@ -99,6 +99,10 @@ def get_my_requests(data):
         elif frappe.db.exists("Madina Driver",{"phone_number":data["phone_number"]}):
             user = frappe.get_doc("Madina Driver",{"phone_number":data["phone_number"]}) # Get User Doc from Driver Doctype
             trips = frappe.get_all("Trips",{"status":('!=',"Completed"),"driver":user.name},{"*"},as_dict=1) # Get Driver Trips that dosen't marked as completed
+
+        res["data"] = trips
+        res["message"] = "Success"
+        res["status_code"] = 200
     except Exception as e:
         res["message"] = str(e)
         res["data"] = None
