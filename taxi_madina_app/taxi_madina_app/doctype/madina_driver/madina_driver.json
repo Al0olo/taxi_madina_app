@@ -1,34 +1,48 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2024-05-14 09:34:10.230343",
+ "creation": "2024-06-03 00:16:03.151432",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "user",
+  "full_name",
+  "column_break_wjyn",
+  "password",
   "phone_number"
  ],
  "fields": [
   {
-   "fieldname": "user",
-   "fieldtype": "Link",
+   "fieldname": "full_name",
+   "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "User",
-   "options": "User",
+   "label": "Full Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_wjyn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "password",
+   "fieldtype": "Password",
+   "in_list_view": 1,
+   "label": "Password",
    "reqd": 1
   },
   {
    "fieldname": "phone_number",
-   "fieldtype": "Data",
-   "label": "Phone Number"
+   "fieldtype": "Phone",
+   "in_list_view": 1,
+   "label": "Phone Number",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-14 10:12:27.608842",
+ "modified": "2024-06-03 00:18:47.835089",
  "modified_by": "Administrator",
  "module": "Taxi Madina App",
- "name": "Madina Member",
+ "name": "Madina Driver",
  "owner": "Administrator",
  "permissions": [
   {

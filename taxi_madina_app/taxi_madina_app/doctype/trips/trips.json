@@ -5,11 +5,16 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "client",
+  "column_break_ccdn",
+  "driver",
+  "section_break_lzpy",
   "from_location",
   "column_break_ksqf",
   "to_location",
   "section_break_zqln",
   "estimated_cost",
+  "payment_method",
   "column_break_llsu",
   "estimated_time"
  ],
@@ -51,11 +56,38 @@
    "fieldname": "estimated_time",
    "fieldtype": "Data",
    "label": "Estimated Time"
+  },
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "label": "Client",
+   "options": "Madina Client",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_ccdn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "driver",
+   "fieldtype": "Link",
+   "label": "Driver",
+   "options": "Madina Driver"
+  },
+  {
+   "fieldname": "section_break_lzpy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "payment_method",
+   "fieldtype": "Select",
+   "label": "Payment Method",
+   "options": "Cash\nInstaPay"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-14 09:28:35.815521",
+ "modified": "2024-06-03 00:23:33.005974",
  "modified_by": "Administrator",
  "module": "Taxi Madina App",
  "name": "Trips",

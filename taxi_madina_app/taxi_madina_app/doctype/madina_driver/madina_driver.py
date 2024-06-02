@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class MadinaMember(Document):
+class MadinaDriver(Document):
 	pass
