@@ -1,0 +1,166 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-05-14 09:21:13.832988",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "client",
+  "column_break_ccdn",
+  "driver",
+  "section_break_zbap",
+  "trip_type",
+  "column_break_zupd",
+  "status",
+  "section_break_lzpy",
+  "from_location",
+  "column_break_ksqf",
+  "to_location",
+  "section_break_zqln",
+  "estimated_cost",
+  "payment_method",
+  "column_break_llsu",
+  "estimated_time",
+  "section_break_ojzy",
+  "car",
+  "car_type",
+  "car_image"
+ ],
+ "fields": [
+  {
+   "fieldname": "from_location",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "From",
+   "options": "Locations",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_ksqf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "to_location",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "To",
+   "options": "Locations",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_zqln",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "estimated_cost",
+   "fieldtype": "Data",
+   "label": "Estimated Cost"
+  },
+  {
+   "fieldname": "column_break_llsu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "estimated_time",
+   "fieldtype": "Data",
+   "label": "Estimated Time"
+  },
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "label": "Client",
+   "options": "Madina Client",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_ccdn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "driver",
+   "fieldtype": "Link",
+   "label": "Driver",
+   "options": "Madina Driver"
+  },
+  {
+   "fieldname": "section_break_lzpy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "payment_method",
+   "fieldtype": "Select",
+   "label": "Payment Method",
+   "options": "Cash\nInstaPay"
+  },
+  {
+   "fieldname": "section_break_zbap",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "trip_type",
+   "fieldtype": "Select",
+   "label": "Trip Type",
+   "options": "Inside The City\nOutside The City\nAirports",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_zupd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Trip Status",
+   "options": "Pending\nOn Going\nUp Coming\nCompleted\nCanceled",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "section_break_ojzy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "car",
+   "fieldtype": "Link",
+   "label": "Car",
+   "options": "Car"
+  },
+  {
+   "fetch_from": "car.car_type",
+   "fieldname": "car_type",
+   "fieldtype": "Data",
+   "label": "Car Type"
+  },
+  {
+   "fetch_from": "car.car_image",
+   "fieldname": "car_image",
+   "fieldtype": "Attach Image",
+   "label": "Car Image"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-06-03 01:44:14.720613",
+ "modified_by": "Administrator",
+ "module": "Taxi Madina App",
+ "name": "Trips",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
