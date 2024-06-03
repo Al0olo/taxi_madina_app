@@ -38,6 +38,24 @@ def create_new_trip_request(data):
         trip_request.from_location = data["from_location"]
         trip_request.to_location = data["to_location"]
 
+        # Set trip direction
+        trip_request.direction = data["trip_direction"]
+
+        # set waiting time if trip direction is two way
+        if data["trip_direction"] == "Two Way":
+            if data["waiting_time"] in ["1 Hour","2 Hour","3 Hour","4 Hour"]:
+                trip_request.waiting_time = data["waiting_time"]
+            else:
+                trip_request.waiting_time = "Open"
+        
+        # set order time
+        if data["arrival_time"] != "" or data["arrival_time"] != None:
+            trip_request.time = data["arrival_time"]
+        
+        # set trip date
+        if data["trip_date"] != "" or data["trip_date"] != None:
+            trip_request.trip_date = data["trip_date"]
+
         # Insert the request in db
         trip_request.insert(ignore_permissions=True)
 
