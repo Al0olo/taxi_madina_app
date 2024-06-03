@@ -71,6 +71,34 @@ def create_new_trip_request(data):
         res["data"] = None
     return res
 
+@frappe.whitelist(allow_guest=True,methods=["GET"])
+def get_my_requests(data):
+    res = {
+        "status_code": 400,
+        "message":"Sucess",
+        "data": {}
+    }
+    try:
+        data = json.dumps(data)
+        
+        # Check if the user is Client
+        if frappe.db.exists("Madina Client",{"phone_number":data["phone_number"]}):
+            user = frappe.get_doc("Madina Client",{"phone_number":data["phone_number"]}) # Get User Doc from Client Doctype
+            trips = frappe.get_all("Trips",{"status":('!=',"Completed"),"client":user.name},{"*"},as_dict=1) # Get Client Trips that dosen't marked as completed
+        # Check if the user is Driver
+        elif frappe.db.exists("Madina Driver",{"phone_number":data["phone_number"]}):
+            user = frappe.get_doc("Madina Driver",{"phone_number":data["phone_number"]}) # Get User Doc from Driver Doctype
+            trips = frappe.get_all("Trips",{"status":('!=',"Completed"),"driver":user.name},{"*"},as_dict=1) # Get Driver Trips that dosen't marked as completed
+
+        res["data"] = trips
+        res["message"] = "Success"
+        res["status_code"] = 200
+    except Exception as e:
+        res["message"] = str(e)
+        res["data"] = None
+    return res
+
+
 @frappe.whitelist(allow_guest=True,methods=["PUT"])
 def cancel_request(data):
     res = {
@@ -99,8 +127,9 @@ def cancel_request(data):
         res["data"] = None
     return res
 
-@frappe.whitelist(allow_guest=True,methods=["GET"])
-def get_my_requests(data):
+
+@frappe.whitellist(allow_guest=True,methods=["PUT"])
+def approve_trip_by_driver():
     res = {
         "status_code": 400,
         "message":"Sucess",
@@ -108,19 +137,21 @@ def get_my_requests(data):
     }
     try:
         data = json.dumps(data)
-        
-        # Check if the user is Client
-        if frappe.db.exists("Madina Client",{"phone_number":data["phone_number"]}):
-            user = frappe.get_doc("Madina Client",{"phone_number":data["phone_number"]}) # Get User Doc from Client Doctype
-            trips = frappe.get_all("Trips",{"status":('!=',"Completed"),"client":user.name},{"*"},as_dict=1) # Get Client Trips that dosen't marked as completed
-        # Check if the user is Driver
-        elif frappe.db.exists("Madina Driver",{"phone_number":data["phone_number"]}):
-            user = frappe.get_doc("Madina Driver",{"phone_number":data["phone_number"]}) # Get User Doc from Driver Doctype
-            trips = frappe.get_all("Trips",{"status":('!=',"Completed"),"driver":user.name},{"*"},as_dict=1) # Get Driver Trips that dosen't marked as completed
 
-        res["data"] = trips
-        res["message"] = "Success"
-        res["status_code"] = 200
+        trip_request = frappe.get_doc("Trips",{data["request_id"]})
+        
+        # Set request status to On Going
+        trip_request.status = "On Going"
+        trip_request.save(ignore_permissions=True)
+
+        # Set the response
+        res["status_code"] = 300
+        res["message"] = "Request Canceled Successfully"
+        res["data"] = {
+            "request_id": trip_request.name,
+            "request_status": trip_request.status,
+        }
+
     except Exception as e:
         res["message"] = str(e)
         res["data"] = None
