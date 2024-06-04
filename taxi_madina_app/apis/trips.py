@@ -10,7 +10,6 @@ def create_new_trip_request(data):
         "data": {}
     }
     try:
-        data = json.dumps(data)
         # Get The client data
         client = frappe.get_doc("Madina Client",{"phone_number":data["phone_number"]})
         
@@ -147,7 +146,7 @@ def approve_trip_by_driver():
         driver_doc = frappe.get_doc("Madina Driver",{"phone_number":data["phone_number"]})
         trip_request.driver = driver_doc.name
         trip_request.car = driver_doc.car
-        
+
         trip_request.save(ignore_permissions=True)
 
         # Set the response

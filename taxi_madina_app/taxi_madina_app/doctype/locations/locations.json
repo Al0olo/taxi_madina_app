@@ -5,7 +5,9 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "location_title"
+  "location_title",
+  "column_break_yurn",
+  "location_type"
  ],
  "fields": [
   {
@@ -14,11 +16,23 @@
    "in_list_view": 1,
    "label": "Location Title",
    "reqd": 1
+  },
+  {
+   "fieldname": "column_break_yurn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "location_type",
+   "fieldtype": "Select",
+   "label": "Location Type",
+   "options": "Inside City\noutside City\nAirPorts",
+   "reqd": 1,
+   "search_index": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-14 09:18:51.862633",
+ "modified": "2024-06-04 18:32:32.987380",
  "modified_by": "Administrator",
  "module": "Taxi Madina App",
  "name": "Locations",
