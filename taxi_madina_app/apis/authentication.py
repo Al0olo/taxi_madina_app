@@ -3,13 +3,14 @@ import json
 
 @frappe.whitelist(allow_guest=True,methods=["POST"])
 def authenticate_user(data):
+    
     res = {
         "status_code": 400,
         "message":"Sucess",
         "data": {}
     }
     try:
-        data = json.dumps(data)
+        data = json.dump(data)
 
         # Validate if the user is existing client
         if frappe.db.exists("Madina Client",{"phone_number":data["phone_number"]}):
