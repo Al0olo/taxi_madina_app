@@ -19,6 +19,8 @@
   {
    "fieldname": "location_type",
    "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Location Type",
    "options": "Inside City\noutside City\nAirPorts",
    "reqd": 1,
@@ -40,7 +42,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-06-05 01:25:10.663723",
+ "modified": "2024-06-05 01:55:52.354854",
  "modified_by": "Administrator",
  "module": "Taxi Madina App",
  "name": "Locations",

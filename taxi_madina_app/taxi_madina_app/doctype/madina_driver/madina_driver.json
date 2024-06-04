@@ -15,7 +15,8 @@
   "column_break_opvs",
   "national_id",
   "section_break_djjw",
-  "address"
+  "address",
+  "status"
  ],
  "fields": [
   {
@@ -70,11 +71,20 @@
    "fieldname": "address",
    "fieldtype": "Long Text",
    "label": "Address"
+  },
+  {
+   "default": "Free",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Free\nIn Order",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-06-05 00:29:37.794835",
+ "modified": "2024-06-05 01:57:28.796078",
  "modified_by": "Administrator",
  "module": "Taxi Madina App",
  "name": "Madina Driver",
