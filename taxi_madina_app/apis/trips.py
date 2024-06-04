@@ -69,7 +69,7 @@ def create_new_trip_request(data):
         res["message"] = str(e)
         res["data"] = None
     return res
-
+ 
 @frappe.whitelist(allow_guest=True,methods=["GET"])
 def get_my_requests(data):
     res = {
