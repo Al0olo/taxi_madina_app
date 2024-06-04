@@ -142,6 +142,12 @@ def approve_trip_by_driver():
         
         # Set request status to On Going
         trip_request.status = "On Going"
+
+        # add car details
+        driver_doc = frappe.get_doc("Madina Driver",{"phone_number":data["phone_number"]})
+        trip_request.driver = driver_doc.name
+        trip_request.car = driver_doc.car
+        
         trip_request.save(ignore_permissions=True)
 
         # Set the response
