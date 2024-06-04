@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:full_name",
  "creation": "2024-06-03 00:16:03.151432",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -12,7 +13,9 @@
   "section_break_dtvu",
   "image",
   "column_break_opvs",
-  "national_id"
+  "national_id",
+  "section_break_djjw",
+  "address"
  ],
  "fields": [
   {
@@ -20,7 +23,8 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Full Name",
-   "reqd": 1
+   "reqd": 1,
+   "unique": 1
   },
   {
    "fieldname": "column_break_wjyn",
@@ -57,14 +61,24 @@
    "fieldname": "national_id",
    "fieldtype": "Data",
    "label": "National ID"
+  },
+  {
+   "fieldname": "section_break_djjw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Long Text",
+   "label": "Address"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-06-05 00:16:18.076626",
+ "modified": "2024-06-05 00:29:37.794835",
  "modified_by": "Administrator",
  "module": "Taxi Madina App",
  "name": "Madina Driver",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
