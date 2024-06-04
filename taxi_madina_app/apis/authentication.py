@@ -16,8 +16,11 @@ def authenticate_user(data):
         # Validate if the user is existing client
         if frappe.db.exists("Madina Client",{"phone_number":data["phone_number"]}):
             client = frappe.get_doc("Madina Client",{"phone_number":data["phone_number"]})
-            if data["token"] != "" or data["token"] != None:
-                client.token = data["token"]
+            try:
+                if data["token"] != "" or data["token"] != None:
+                    client.token = data["token"]
+            except Exception:
+                pass
             if data["full_name"] != "" or data["full_name"] != None:
                 client.full_name = data['full_name']
             client.save(ignore_permissions=True)
@@ -42,12 +45,13 @@ def authenticate_user(data):
         else:
             client = frappe.new_doc("Madina Client")
             client.phone_number = data["phone_number"] # The only mandatory field
-            if data["token"] != "" or data["token"] != None:
-                client.token = data["token"]
+            try:
+                if data["token"] != "" or data["token"] != None:
+                    client.token = data["token"]
+            except Exception:
+                pass
             if data["full_name"] != "" or data["full_name"] != None:
                 client.full_name = data['full_name']
-            if data["address"] != "" or data["address"] != None:
-                client.address = data['address']
             client.insert(ignore_permissions=True)
             
             res["status_code"] = 203
