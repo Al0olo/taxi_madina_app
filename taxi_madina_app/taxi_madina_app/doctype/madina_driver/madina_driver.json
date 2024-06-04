@@ -28,7 +28,7 @@
   },
   {
    "fieldname": "phone_number",
-   "fieldtype": "Phone",
+   "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Phone Number",
    "reqd": 1
@@ -61,7 +61,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-06-04 23:12:06.334837",
+ "modified": "2024-06-05 00:16:18.076626",
  "modified_by": "Administrator",
  "module": "Taxi Madina App",
  "name": "Madina Driver",
