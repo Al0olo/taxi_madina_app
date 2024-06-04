@@ -152,7 +152,7 @@
    "fieldname": "waiting_time",
    "fieldtype": "Select",
    "label": "Waiting Time",
-   "options": "1 Hour\n2 Hour\n3 Hour\n4 Hour\nOpen"
+   "options": "20 Min\n40 Min\n60 Min\n80 Min\n100 Min\n120 Min\n140 Min\n160 Min\n180 Min\n200 Min\n220 Min\n240 Min\n260 Min\n280 Min\nOpen"
   },
   {
    "fieldname": "time",
@@ -168,7 +168,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-06-04 23:10:46.870649",
+ "modified": "2024-06-05 02:33:44.263706",
  "modified_by": "Administrator",
  "module": "Taxi Madina App",
  "name": "Trips",
