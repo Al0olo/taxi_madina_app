@@ -8,8 +8,11 @@
   "full_name",
   "car",
   "column_break_wjyn",
-  "password",
-  "phone_number"
+  "phone_number",
+  "section_break_dtvu",
+  "image",
+  "column_break_opvs",
+  "national_id"
  ],
  "fields": [
   {
@@ -24,13 +27,6 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "password",
-   "fieldtype": "Password",
-   "in_list_view": 1,
-   "label": "Password",
-   "reqd": 1
-  },
-  {
    "fieldname": "phone_number",
    "fieldtype": "Phone",
    "in_list_view": 1,
@@ -43,11 +39,29 @@
    "label": "Car",
    "options": "Car",
    "reqd": 1
+  },
+  {
+   "fieldname": "section_break_dtvu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "label": "Image"
+  },
+  {
+   "fieldname": "column_break_opvs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "national_id",
+   "fieldtype": "Data",
+   "label": "National ID"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-06-03 01:11:06.612140",
+ "modified": "2024-06-04 23:12:06.334837",
  "modified_by": "Administrator",
  "module": "Taxi Madina App",
  "name": "Madina Driver",

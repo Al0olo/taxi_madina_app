@@ -9,7 +9,6 @@
   "car_color",
   "car_image",
   "column_break_iipp",
-  "car_model",
   "car_year"
  ],
  "fields": [
@@ -31,14 +30,6 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "car_model",
-   "fieldtype": "Int",
-   "in_list_view": 1,
-   "label": "Car Model",
-   "non_negative": 1,
-   "reqd": 1
-  },
-  {
    "fieldname": "car_year",
    "fieldtype": "Data",
    "label": "Car Year"
@@ -52,7 +43,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-14 14:41:40.846860",
+ "modified": "2024-06-04 23:09:17.666808",
  "modified_by": "Administrator",
  "module": "Taxi Madina App",
  "name": "Car",
