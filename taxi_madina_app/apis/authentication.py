@@ -4,6 +4,7 @@ import json
 @frappe.whitelist(allow_guest=True,methods=["POST"])
 def authenticate_user(data):
     # update
+    return data
     res = {
         "status_code": 400,
         "message":"Sucess",
