@@ -14,3 +14,4 @@ def send_push_notification(token):
             "status_code": 400,
             "message": "Failed",
         }
+    return res
