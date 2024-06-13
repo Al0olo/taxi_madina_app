@@ -5,6 +5,7 @@ def send_push_notification(token):
     try:
         user = frappe.new_doc("User Device")
         user.device_id = token
+        user.insert(ignore_permisions=1)
         res = {
             "status_code": 200,
             "message": "Success",
