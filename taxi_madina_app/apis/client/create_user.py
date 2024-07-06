@@ -15,7 +15,7 @@ def Register(phone,name):
         user.flags.ignore_permissions = True
         user.insert()
         
-        client = frappe.new_doc('Client')
+        client = frappe.new_doc('Madina Client')
         client.full_name = name
         client.phone_number = phone
         client.insert(ignore_permissions = True)
