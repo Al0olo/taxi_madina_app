@@ -15,6 +15,7 @@ def login(user,pwd="Asd@123"):
             "message": "Success",
             "data": client_doc
         }
+        return res
     except Exception as e:
         frappe.local.response.http_status_code = 400
         return {
