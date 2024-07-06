@@ -24,7 +24,7 @@ def Register(phone,name):
         res = {
             "status_code":200,
             "message": "Success",
-            "data": [user , client]
+            "data": client
         }
         return res
     except Exception as e:
