@@ -31,7 +31,7 @@ def Register(phone,name):
         frappe.local.response.http_status_code = 400
         return {
             "status_code":400,
-            "message": str(e),
+            "message": "Duplicate Entry For Phone Number",
             "data": {}
         }
 
