@@ -1,13 +1,13 @@
 import frappe
 
 @frappe.whitelist(methods=["POST"],allow_guest=True)
-def Register(user,name):
+def Register(phone,name):
     try:
         user = frappe.new_doc('User')
         user.enabled = 1
-        user.email = user + "@gmail.com"
+        user.email = str(phone) + "@gmail.com"
         user.first_name = name
-        user.mobile_no = user
+        user.mobile_no = phone
         user.role_profile_name = 'Client'
         user.user_type = 'Website User'
         user.send_welcome_email = False
@@ -17,7 +17,7 @@ def Register(user,name):
         
         client = frappe.new_doc('Client')
         client.full_name = name
-        client.phone_number = user
+        client.phone_number = phone
         client.insert(ignore_permissions = True)
 
 
