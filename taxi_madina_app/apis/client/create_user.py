@@ -24,7 +24,7 @@ def Register(phone,name):
         res = {
             "status_code":200,
             "message": "Success",
-            "data": user + client
+            "data": [user , client]
         }
     except Exception as e:
         frappe.local.response.http_status_code = 400
