@@ -11,6 +11,7 @@ def get_user_orders():
             "data": trips,
         }
     except Exception as e:
+        frappe.local.response.http_status_code = 400
         return {
                 "status_code":400,
                 "message": str(e),

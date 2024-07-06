@@ -23,6 +23,7 @@ def create_order(from_location,to_location,trip_type,direction,waiting_time,trip
         }
 
     except Exception as e:
+        frappe.local.response.http_status_code = 400
         return {
             "status_code":400,
             "message": str(e),
