@@ -6,7 +6,7 @@ def create_order(from_location,to_location,trip_type,direction,waiting_time,trip
         client = frappe.session.user
 
         trip = frappe.new_doc("Trips")
-        trip.client = frappe.get_value("Client",{"phone_number":(client.split("@")[0])},"name")
+        trip.client = frappe.get_value("Madina Client",{"phone_number":(client.split("@")[0])},"name")
         if trip_type == 'inside_city':
             trip.trip_type = "Inside The City"
         elif trip_type == 'outside_city':
