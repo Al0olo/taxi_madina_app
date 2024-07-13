@@ -4,7 +4,8 @@ import frappe
 def get_user_orders():
     try:
         client = frappe.session.user
-        trips = frappe.get_all("Trips",{"client":client},{"*"})
+        client_id = frappe.get_value("Madina Client",{"phone_number":(client.split("@")[0])},"name")
+        trips = frappe.get_all("Trips",{"client":client_id},{"*"})
         return {
             "status_code": 200,
             "message": "Success",
