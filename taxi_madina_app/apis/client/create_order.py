@@ -1,7 +1,7 @@
 import frappe
 
 @frappe.whitelist(allow_guest=True,methods=["POST"])
-def create_order(from_location,to_location,trip_type,direction,waiting_time,trip_date):
+def create_order(from_location,to_location,trip_type,direction,waiting_time,trip_date,phone_num):
     try:
         client = frappe.session.user
 
@@ -20,6 +20,7 @@ def create_order(from_location,to_location,trip_type,direction,waiting_time,trip
         trip.time = str(waiting_time) + ' Min'
         trip.from_location = from_location
         trip.to_location = to_location
+        trip.estimated_time = phone_num
         trip.trip_date = trip_date
         trip.insert(ignore_permissions=True)
 
