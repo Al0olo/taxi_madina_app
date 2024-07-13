@@ -7,10 +7,17 @@ def create_order(from_location,to_location,trip_type,direction,waiting_time,trip
 
         trip = frappe.new_doc("Trips")
         trip.client = client
-        trip.trip_type = trip_type
+        if trip_type == 'inside_city':
+            trip.trip_type = "Inside The City"
+        elif trip_type == 'outside_city':
+            trip.trip_type = 'Outside The City'
+        elif trip_type == 'airports':
+            trip.trip_type = 'Airports'
         trip.status = "Pending"
-        trip.direction = direction
-        trip.waiting_time = waiting_time
+        if direction == 'one_way':
+            trip.direction = "One Way"
+        
+        trip.time = str(waiting_time) + ' Min'
         trip.from_location = from_location
         trip.to_location = to_location
         trip.trip_date = trip_date
