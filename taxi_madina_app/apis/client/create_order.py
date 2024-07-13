@@ -16,6 +16,8 @@ def create_order(from_location,to_location,trip_type,direction,waiting_time,trip
         trip.status = "Pending"
         if direction == 'one_way':
             trip.direction = "One Way"
+        elif direction == 'two_way':
+            trip.direction = "Two Way"
         
         trip.time = str(waiting_time) + ' Min'
         trip.from_location = from_location
