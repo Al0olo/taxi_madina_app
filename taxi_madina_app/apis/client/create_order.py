@@ -19,7 +19,7 @@ def create_order(from_location,to_location,trip_type,direction,waiting_time,trip
         elif direction == 'two_way':
             trip.direction = "Two Way"
         
-        trip.time = str(waiting_time) + ' Min'
+        trip.time = str(waiting_time) + ' Mins'
         trip.from_location = from_location
         trip.to_location = to_location
         trip.estimated_time = phone_num
